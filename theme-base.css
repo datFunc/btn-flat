@@ -1,10 +1,31 @@
-/* Global styes */
-
 ul {
-    list-style: none;
+    list-style: none
 }
 
-/* Utilities */
 .hidden {
+    display: none
+}
+
+#donation {
+    position: relative;
+    top: -53px;
+    left: 0;
+}
+
+div#DonInfo a {
+    font-size: .55rem;
+}
+
+#wrapper h1.hidden {
+    display: block;
+    margin: 1rem auto 2rem;
+    text-align: center;
+}
+
+#wrapper {
+    margin-top: 1.5rem;
+}
+
+.potato-menu-group {
     display: none;
 }
