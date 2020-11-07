@@ -1,7 +1,7 @@
 body {
-    font-family: "Poppins", Helvetica, Tahoma, Arial, sans-serif;
+    font-family: poppins,Helvetica,Tahoma,Arial,sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1rem
 }
 
 ul {
@@ -36,21 +36,35 @@ div#DonInfo a {
     display: none
 }
 
-#userinfo ul,
-#menu1 {
-    display: flex;
+#menu1,
+#userinfo ul {
+    display: inline-block;
     margin: 0 auto;
+    font-size: .84rem;
 }
 
-#userinfo_username li,
-#userinfo_major li,
-#userinfo_stats li,
-#userinfo_minor li {
+#userinfo_username li,#userinfo_major li,#userinfo_stats li,#userinfo_minor li {
+    display: inline-block;
     margin: 0 .5rem;
-    justify-content: space-evenly;
 }
 
 #menu1 .nav-link {
     display: inline-flex;
-    margin: 0 1rem;
+    margin: 0 1rem
+}
+
+#searchbars ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#searchbars ul li {
+  padding: 5px;
+  width: auto;
+  margin: 1rem auto 3rem;
 }
