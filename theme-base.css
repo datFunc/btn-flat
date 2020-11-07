@@ -8,6 +8,24 @@ ul {
     list-style: none
 }
 
+a,
+button,
+.button,
+.btn
+input[type="submit"] {
+    transition: all 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+label,
+label a,
+.label {
+    font-size: .8rem;
+}
+
 .hidden {
     display: none
 }
@@ -36,16 +54,15 @@ div#DonInfo a {
     display: none
 }
 
-#menu1,
-#userinfo ul {
+#menu1,#userinfo ul {
     display: inline-block;
     margin: 0 auto;
-    font-size: .84rem;
+    font-size: .84rem
 }
 
 #userinfo_username li,#userinfo_major li,#userinfo_stats li,#userinfo_minor li {
     display: inline-block;
-    margin: 0 .5rem;
+    margin: 0 .5rem
 }
 
 #menu1 .nav-link {
@@ -54,17 +71,34 @@ div#DonInfo a {
 }
 
 #searchbars ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none
 }
 
 #searchbars ul li {
-  padding: 5px;
-  width: auto;
-  margin: 1rem auto 3rem;
+    padding: 5px;
+    width: auto;
+    margin: 1rem auto 3rem
+}
+
+#taglist {
+    margin: 1rem;
+    border: 1px solid #ced4d9;
+    background-color: #ffffff;
+    border-radius: .25rem;
+}
+
+#taglist tbody  a {
+    font-size: .8rem;
+    margin: 1rem;
+    text-transform: capitalize;
+}
+
+.linkbox {
+    font-size: .8rem;
+    text-align: center;
 }
