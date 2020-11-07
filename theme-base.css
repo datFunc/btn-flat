@@ -8,22 +8,20 @@ ul {
     list-style: none
 }
 
-a,
-button,
-.button,
-.btn
-input[type="submit"] {
-    transition: all 0.3s;
+a,button,.button,.btn input[type=submit] {
+    transition: all .3s
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none
 }
 
-label,
-label a,
-.label {
-    font-size: .8rem;
+label,label a,.label {
+    font-size: .8rem
+}
+
+label[for="cat_1"] {
+  margin-right: 2rem;
 }
 
 .hidden {
@@ -32,7 +30,7 @@ label a,
 
 #donation {
     position: relative;
-    top: -53px;
+    top: -100px;
     left: 0
 }
 
@@ -43,7 +41,9 @@ div#DonInfo a {
 #wrapper h1.hidden {
     display: block;
     margin: 1rem auto 2rem;
-    text-align: center
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 #wrapper {
@@ -88,17 +88,124 @@ div#DonInfo a {
 #taglist {
     margin: 1rem;
     border: 1px solid #ced4d9;
-    background-color: #ffffff;
-    border-radius: .25rem;
+    background-color: #fff;
+    border-radius: .25rem
 }
 
-#taglist tbody  a {
+#taglist tbody a {
     font-size: .8rem;
     margin: 1rem;
-    text-transform: capitalize;
+    text-transform: capitalize
 }
 
 .linkbox {
     font-size: .8rem;
-    text-align: center;
+    text-align: center
 }
+
+
+
+.filter_torrents h3 {
+  font-size: 1.2rem;
+}
+
+  /* Category Icons */
+
+  /* Hide default icons */
+  img[src="https://cdn.broadcasthe.net/common/caticons/series-hd.png"],
+  img[src="https://cdn.broadcasthe.net/common/caticons/episode-hd.png"],
+  img[src="https://cdn.broadcasthe.net/common/caticons/series-sd.png"],
+  img[src="https://cdn.broadcasthe.net/common/caticons/episode-sd.png"]
+  {
+    display: none;
+  }
+
+  .episode-hd,
+  .episode-sd {
+    background: url("https://gistcdn.githack.com/datFunc/bd1bc6c99ab52917feefbf177772937b/raw/fd26db499f762aacd4461a061cdd1d63f957d0f2/tv-episode-alt.svg")
+      no-repeat center top;
+  }
+
+  .season-hd,
+  .season-sd {
+    background: url("https://gistcdn.githack.com/datFunc/bd1bc6c99ab52917feefbf177772937b/raw/fd26db499f762aacd4461a061cdd1d63f957d0f2/tv-season-alt.svg")
+      no-repeat center top;
+  }
+
+  .season-hd::before,
+  .season-hd::after,
+  .episode-hd::before,
+  .episode-hd::after,
+  .season-sd::before,
+  .season-sd::after,
+  .episode-sd::before,
+  .episode-sd::after {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .season-hd::before,
+  .episode-hd::before,
+  .season-sd::before,
+  .episode-sd::before {
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: block;
+    position: relative;
+    top: 4px;
+    left: 0;
+    mix-blend-mode: overlay;
+  }
+
+  .season-hd::after,
+  .episode-hd::after,
+  .season-sd::after,
+  .episode-sd::after {
+    font-size: 0.6rem;
+    font-weight: 700;
+    display: block;
+    margin: 20px auto 0;
+  }
+
+  .season-hd::before,
+  .episode-hd::before {
+    content: "HD";
+  }
+
+  .season-hd::after,
+  .season-sd::after {
+    content: "Season";
+    color: #c83231;
+  }
+
+  .season-sd::before,
+  .episode-sd::before {
+    content: "SD";
+  }
+
+  .episode-hd::after,
+  .episode-sd::after {
+    content: "Episode";
+    color: #327cd1;
+  }
+
+  .season-hd,
+  .episode-hd,
+  .season-sd,
+  .episode-sd {
+    display: block;
+    background-size: 50px;
+    padding: 0 0.3rem;
+    transition: all 0.3s;
+    transform: scale(0.9);
+  }
+
+  .season-hd:hover,
+  .episode-hd:hover,
+  .season-sd:hover,
+  .episode-sd:hover {
+    opacity: 0.6;
+  }
