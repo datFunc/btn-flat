@@ -1,7 +1,13 @@
 body {
     font-family: poppins,Helvetica,Tahoma,Arial,sans-serif;
     font-weight: 400;
-    font-size: 1rem
+    font-size: 1rem;
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: normal;
+    -webkit-font-variant-ligatures: normal;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: greyscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -16,7 +22,10 @@ a:hover {
     text-decoration: none
 }
 
-label,label a,.label {
+label,
+label a,
+.label,
+.form-control {
     font-size: .8rem
 }
 
@@ -38,26 +47,113 @@ div#DonInfo a {
     font-size: .55rem
 }
 
-#wrapper h1.hidden {
+/* #wrapper h1.hidden {
     display: block;
     margin: 1rem auto 2rem;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
-}
+} */
+
+#logo {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #logo a {
+    display: block;
+    height: 100px;
+  }
+
+  #logo a:hover {
+    border: 0;
+  }
+
+  #logo a::before {
+    position: absolute;
+    top: 5px;
+    content: "";
+    background: url("https://raw.githubusercontent.com/gist/datFunc/6a714dd2d20edc246facae8c063125c1/raw/b762783da7be41e313c389362144c0ad25e5372d/logo.svg")
+      no-repeat left center;
+    background-size: 100% 100%;
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    margin-left: -60px;
+  }
+
+  #logo a::after {
+    content: "BroadcasTheNet";
+    color: #329bc2;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+  }
 
 #wrapper {
     margin-top: 1.5rem
 }
 
 .potato-menu-group {
-    display: none
+    display: none;
 }
+
+  ul.potato-menu li.potato-menu-item {
+    position: relative;
+  }
+
+  ul.potato-menu li.potato-menu-item a {
+    display: block;
+    padding: 0 20px;
+    line-height: 30px;
+    height: 30px;
+  }
+
+  ul.potato-menu ul.potato-menu-group {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    background: #eaeaea;
+    width: auto;
+    text-align: left;
+  }
+
+  ul.potato-menu ul.potato-menu-group li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.potato-menu ul.potato-menu-group a {
+    display: block;
+    min-width: 140px;
+    padding: 0 10px;
+  }
+
+  ul.potato-menu ul.potato-menu-group a:hover {
+    background-color: #c1c1c1;
+    color: #ffffff;
+  }
+
+  #header,
+  #header a {
+    color: #212529;
+  }
 
 #menu1,#userinfo ul {
     display: inline-block;
     margin: 0 auto;
-    font-size: .84rem
+    font-size: .84rem;
 }
 
 #userinfo_username li,#userinfo_major li,#userinfo_stats li,#userinfo_minor li {
@@ -82,25 +178,25 @@ div#DonInfo a {
 #searchbars ul li {
     padding: 5px;
     width: auto;
-    margin: 1rem auto 3rem
+    margin: 1rem auto;
 }
 
 #taglist {
     margin: 1rem;
     border: 1px solid #ced4d9;
     background-color: #fff;
-    border-radius: .25rem
+    border-radius: .25rem;
 }
 
 #taglist tbody a {
     font-size: .8rem;
     margin: 1rem;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .linkbox {
     font-size: .8rem;
-    text-align: center
+    text-align: center;
 }
 
 
@@ -164,7 +260,7 @@ div#DonInfo a {
   .episode-hd::after,
   .season-sd::after,
   .episode-sd::after {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     font-weight: 700;
     display: block;
     margin: 20px auto 0;
@@ -207,5 +303,5 @@ div#DonInfo a {
   .episode-hd:hover,
   .season-sd:hover,
   .episode-sd:hover {
-    opacity: 0.6;
+    opacity: 0.75;
   }
